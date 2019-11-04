@@ -56,6 +56,8 @@
 		AE12ACB4236FCC0300BD53DD /* PokeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				AE12ACC9236FCC4400BD53DD /* Models */,
+				AE12ACCA236FCC5200BD53DD /* Views */,
 				AE12ACB5236FCC0300BD53DD /* AppDelegate.swift */,
 				AE12ACB7236FCC0300BD53DD /* SceneDelegate.swift */,
 				AE12ACB9236FCC0300BD53DD /* ContentView.swift */,
@@ -73,6 +75,20 @@
 				AE12ACBE236FCC0400BD53DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AE12ACC9236FCC4400BD53DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE12ACCA236FCC5200BD53DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
