@@ -13,6 +13,8 @@
 		AE12ACBC236FCC0400BD53DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE12ACBB236FCC0400BD53DD /* Assets.xcassets */; };
 		AE12ACBF236FCC0400BD53DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE12ACBE236FCC0400BD53DD /* Preview Assets.xcassets */; };
 		AE12ACC2236FCC0400BD53DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE12ACC0236FCC0400BD53DD /* LaunchScreen.storyboard */; };
+		AE12ACCC236FD02000BD53DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACCB236FD02000BD53DD /* NetworkManager.swift */; };
+		AE12ACCE236FD06C00BD53DD /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACCD236FD06C00BD53DD /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		AE12ACBE236FCC0400BD53DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AE12ACC1236FCC0400BD53DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE12ACC3236FCC0400BD53DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE12ACCB236FD02000BD53DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AE12ACCD236FD06C00BD53DD /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		AE12ACC9236FCC4400BD53DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AE12ACCB236FD02000BD53DD /* NetworkManager.swift */,
+				AE12ACCD236FD06C00BD53DD /* Pokemon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE12ACCE236FD06C00BD53DD /* Pokemon.swift in Sources */,
+				AE12ACCC236FD02000BD53DD /* NetworkManager.swift in Sources */,
 				AE12ACB6236FCC0300BD53DD /* AppDelegate.swift in Sources */,
 				AE12ACB8236FCC0300BD53DD /* SceneDelegate.swift in Sources */,
 				AE12ACBA236FCC0300BD53DD /* ContentView.swift in Sources */,
