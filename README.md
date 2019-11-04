@@ -1,2 +1,2 @@
 # PokeSwift
-An MVC example with Pokemon in swift + API fetching + No storyboards
+An example of SwiftUI with Pokemon + API fetching
