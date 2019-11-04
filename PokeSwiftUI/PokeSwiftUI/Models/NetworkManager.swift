@@ -14,7 +14,7 @@ class NetworkManager: ObservableObject {
     private init() { }
     
     @Published var pokemons = [PokemonRaw]()
-    @Published var pokemon: DetailedPokemon?
+    @Published var pokemon = DetailedPokemon(id: 123456, sprites: Sprite(front_default: nil), types: [Types(slot: 1, type: Type(name: "Unknown", url: "123"))])
     
     func fetchPokemons() {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?offset=20&limit=964#") else { return }
@@ -40,8 +40,8 @@ class NetworkManager: ObservableObject {
         task.resume()
     }
     
-    func fetchPokemonDetails(for pokemonID: String) {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/\(pokemonID)") else { return }
+    func fetchPokemonDetails(with url: String) {
+        guard let url = URL(string: url) else { return }
         
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -54,7 +54,6 @@ class NetworkManager: ObservableObject {
                         let result = try decoder.decode(DetailedPokemon.self, from: safeData)
                         DispatchQueue.main.async {
                             self.pokemon = result
-                            print(self.pokemon)
                         }
                     } catch {
                         print(error.localizedDescription)

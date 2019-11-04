@@ -15,18 +15,17 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(networkManager.pokemons) { pokemon in
-                
-                HStack {
-                    Text(String(pokemon.name.capitalized))
-                        .font(.callout)
-                    
+                NavigationLink(destination: DetailView(url: pokemon.url, name: pokemon.name)) {
+                    HStack {
+                        Text(String(pokemon.name.capitalized))
+                            .font(.callout)
+                    }
                 }
             }
             .navigationBarTitle("PokeSwiftUI")
         }
         .onAppear {
             self.networkManager.fetchPokemons()
-            self.networkManager.fetchPokemonDetails(for: "21")
         }
     }
 }

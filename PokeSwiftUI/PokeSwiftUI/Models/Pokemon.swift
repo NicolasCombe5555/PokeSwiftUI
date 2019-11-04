@@ -31,7 +31,10 @@ struct Sprite: Decodable {
 
 }
 
-struct Types: Decodable {
+struct Types: Decodable, Identifiable {
+    var id: Int {
+        return slot
+    }
     let slot: Int
     let type: Type
 }

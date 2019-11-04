@@ -9,22 +9,32 @@
 import SwiftUI
 
 struct DetailView: View {
+    
+    let url: String
+    let name: String
+    
+    @ObservedObject var networkManager = NetworkManager.shared
+    
     var body: some View {
         VStack {
+            Text(name)
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("Id: \(networkManager.pokemon.id )")
             HStack {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                ForEach(networkManager.pokemon.types) { type in
+                    Text("Type: \(type.type.name)")
+                }
+  
             }
         }
-        
+        .onAppear() {
+            self.networkManager.fetchPokemonDetails(with: self.url)
+        }
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(url: "https://pokeapi.co/api/v2/pokemon/21", name: "Test")
     }
 }
