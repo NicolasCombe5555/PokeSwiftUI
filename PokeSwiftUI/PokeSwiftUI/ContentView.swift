@@ -26,6 +26,7 @@ struct ContentView: View {
         }
         .onAppear {
             self.networkManager.fetchPokemons()
+            self.networkManager.fetchPokemonDetails(for: "21")
         }
     }
 }
