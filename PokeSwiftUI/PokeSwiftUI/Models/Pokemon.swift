@@ -6,7 +6,7 @@
 //  Copyright © 2019 Nicolas Combe. All rights reserved.
 //
 
-//All pokemons
+//MARK: - All pokemons
 struct Response: Decodable {
     let results: [PokemonRaw]
 }
@@ -19,7 +19,7 @@ struct PokemonRaw: Decodable, Identifiable {
     let url: String
 }
 
-// Detailed Information
+//MARK: - Detailed Information
 struct DetailedPokemon: Decodable {
     let id: Int
     let sprites: Sprite

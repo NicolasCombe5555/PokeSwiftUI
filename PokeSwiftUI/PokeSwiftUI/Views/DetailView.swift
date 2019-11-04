@@ -20,17 +20,19 @@ struct DetailView: View {
             Text(name)
                 .font(.title)
             
-            Spacer()
+            WebView(urlString: networkManager.pokemon.sprites.front_default)
+                .frame(width: 300, height: 100, alignment: .center)
             
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            
-            Spacer()
             Text("Pokedex id: \(networkManager.pokemon.id )")
+                .font(.subheadline)
+            
             HStack {
                 ForEach(networkManager.pokemon.types) { type in
                     Image("s_\(type.type.name)")
                 }
             }
+            
+            Spacer()
         }
         .onAppear() {
             self.networkManager.fetchPokemonDetails(with: self.url)
