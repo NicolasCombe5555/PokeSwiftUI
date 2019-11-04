@@ -7,10 +7,13 @@
 //
 
 struct Response: Decodable {
-    let pokemons: [PokemonRaw]
+    let results: [PokemonRaw]
 }
 
-struct PokemonRaw: Decodable {
+struct PokemonRaw: Decodable, Identifiable {
+    var id: String {
+        return name
+    }
     let name: String
     let url: String
 }

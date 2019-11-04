@@ -9,8 +9,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var networkManager = NetworkManager.shared
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List(networkManager.pokemons) { pokemon in
+                
+                HStack {
+                    Text(String(pokemon.name.capitalized))
+                        .font(.callout)
+                    
+                }
+            }
+            .navigationBarTitle("PokeSwiftUI")
+        }
+        .onAppear {
+            self.networkManager.fetchPokemons()
+        }
     }
 }
 
