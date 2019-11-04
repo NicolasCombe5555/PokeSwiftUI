@@ -14,7 +14,7 @@ class NetworkManager: ObservableObject {
     private init() { }
     
     @Published var pokemons = [PokemonRaw]()
-    @Published var pokemon = DetailedPokemon(id: 123456, sprites: Sprite(front_default: nil), types: [Types(slot: 1, type: Type(name: "Unknown", url: "123"))])
+    @Published var pokemon = DetailedPokemon(id: 123456, sprites: Sprite(front_default: nil), types: [Types(slot: 1, type: Type(name: "water", url: "123"))])
     
     func fetchPokemons() {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?offset=0&limit=964#") else { return }
