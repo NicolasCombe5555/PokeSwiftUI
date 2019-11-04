@@ -17,7 +17,7 @@ class NetworkManager: ObservableObject {
     @Published var pokemon = DetailedPokemon(id: 123456, sprites: Sprite(front_default: nil), types: [Types(slot: 1, type: Type(name: "Unknown", url: "123"))])
     
     func fetchPokemons() {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?offset=20&limit=964#") else { return }
+        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?offset=0&limit=964#") else { return }
         
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { (data, response, error) in

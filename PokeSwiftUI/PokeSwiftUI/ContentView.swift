@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(networkManager.pokemons) { pokemon in
-                NavigationLink(destination: DetailView(url: pokemon.url, name: pokemon.name)) {
+                NavigationLink(destination: DetailView(url: pokemon.url, name: pokemon.name.capitalized)) {
                     HStack {
                         Text(String(pokemon.name.capitalized))
                             .font(.callout)

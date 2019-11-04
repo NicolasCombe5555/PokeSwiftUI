@@ -18,13 +18,18 @@ struct DetailView: View {
     var body: some View {
         VStack {
             Text(name)
+                .font(.title)
+            
+            Spacer()
+            
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            Text("Id: \(networkManager.pokemon.id )")
+            
+            Spacer()
+            Text("Pokedex id: \(networkManager.pokemon.id )")
             HStack {
                 ForEach(networkManager.pokemon.types) { type in
-                    Text("Type: \(type.type.name)")
+                    Image("s_\(type.type.name)")
                 }
-  
             }
         }
         .onAppear() {
@@ -35,6 +40,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(url: "https://pokeapi.co/api/v2/pokemon/21", name: "Test")
+        DetailView(url: "https://pokeapi.co/api/v2/pokemon/21", name: "Spearow")
     }
 }
