@@ -35,7 +35,7 @@ struct DetailView: View {
             Spacer()
         }
         .onAppear() {
-            self.networkManager.fetchPokemonDetails(with: self.url)
+            self.networkManager.fetchPokemonDetails(withURL: self.url)
         }
     }
 }

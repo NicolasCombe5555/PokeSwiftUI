@@ -14,53 +14,46 @@ class NetworkManager: ObservableObject {
     private init() { }
     
     @Published var pokemons = [PokemonRaw]()
-    @Published var pokemon = DetailedPokemon(id: 123456, sprites: Sprite(front_default: nil), types: [Types(slot: 1, type: Type(name: "water", url: "123"))])
+    @Published var pokemon = DetailedPokemon(id: 123456, sprites: Sprite(front_default: nil), types: [Types]())
     
     func fetchPokemons() {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?offset=0&limit=964#") else { return }
         
-        let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-                let decoder = JSONDecoder()
-                if let safeData = data {
-                    do {
-                        let results = try decoder.decode(Response.self, from: safeData)
-                        DispatchQueue.main.async {
-                            self.pokemons = results.results
-                        }
-                    } catch {
-                        print(error.localizedDescription)
-                    }
+        URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+
+            if let error = error { print(error.localizedDescription) }
+
+            if let safeData = data {
+                do {
+
+                    let decoder = JSONDecoder()
+                    let results = try decoder.decode(Response.self, from: safeData)
+                    DispatchQueue.main.async { self.pokemons = results.results }
+
+                } catch {
+                    print(error.localizedDescription)
                 }
-            
-        }
-        task.resume()
+            }
+        }.resume()
     }
     
-    func fetchPokemonDetails(with url: String) {
+    func fetchPokemonDetails(withURL url: String) {
         guard let url = URL(string: url) else { return }
         
-        let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-                let decoder = JSONDecoder()
-                if let safeData = data {
-                    do {
-                        let result = try decoder.decode(DetailedPokemon.self, from: safeData)
-                        DispatchQueue.main.async {
-                            self.pokemon = result
-                        }
-                    } catch {
-                        print(error.localizedDescription)
-                    }
+        URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            if let error = error { print(error.localizedDescription) }
+
+            if let safeData = data {
+                do {
+
+                    let decoder = JSONDecoder()
+                    let result = try decoder.decode(DetailedPokemon.self, from: safeData)
+                    DispatchQueue.main.async { self.pokemon = result }
+
+                } catch {
+                    print(error.localizedDescription)
                 }
-            
-        }
-        task.resume()
+            }
+        }.resume()
     }
 }

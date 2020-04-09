@@ -66,14 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				AE8EC45E237073BF00DE2A34 /* PokeSwiftUI.entitlements */,
+				AEAE1631243F97AA009F8F57 /* SupportingFiles */,
 				AE12ACC9236FCC4400BD53DD /* Models */,
 				AE12ACCA236FCC5200BD53DD /* Views */,
-				AE12ACB5236FCC0300BD53DD /* AppDelegate.swift */,
-				AE12ACB7236FCC0300BD53DD /* SceneDelegate.swift */,
-				AE12ACB9236FCC0300BD53DD /* ContentView.swift */,
-				AE12ACBB236FCC0400BD53DD /* Assets.xcassets */,
-				AE12ACC0236FCC0400BD53DD /* LaunchScreen.storyboard */,
-				AE12ACC3236FCC0400BD53DD /* Info.plist */,
 				AE12ACBD236FCC0400BD53DD /* Preview Content */,
 			);
 			path = PokeSwiftUI;
@@ -99,10 +94,23 @@
 		AE12ACCA236FCC5200BD53DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AE12ACCF236FD1B400BD53DD /* WebView.swift */,
+				AE12ACB9236FCC0300BD53DD /* ContentView.swift */,
 				AE12ACD1236FD3E000BD53DD /* DetailView.swift */,
+				AE12ACCF236FD1B400BD53DD /* WebView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AEAE1631243F97AA009F8F57 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AE12ACB5236FCC0300BD53DD /* AppDelegate.swift */,
+				AE12ACB7236FCC0300BD53DD /* SceneDelegate.swift */,
+				AE12ACBB236FCC0400BD53DD /* Assets.xcassets */,
+				AE12ACC0236FCC0400BD53DD /* LaunchScreen.storyboard */,
+				AE12ACC3236FCC0400BD53DD /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,7 +332,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PokeSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 4Z3V8R3HV6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PokeSwiftUI/Info.plist;
+				INFOPLIST_FILE = PokeSwiftUI/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -348,7 +356,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PokeSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 4Z3V8R3HV6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PokeSwiftUI/Info.plist;
+				INFOPLIST_FILE = PokeSwiftUI/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
