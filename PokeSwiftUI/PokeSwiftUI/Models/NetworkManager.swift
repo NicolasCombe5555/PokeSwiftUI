@@ -9,17 +9,17 @@
 import Foundation
 
 class NetworkManager: ObservableObject {
-    
+
     static let shared = NetworkManager()
     private init() { }
-    
+
     @Published var pokemons = [PokemonRaw]()
     @Published var pokemon = DetailedPokemon(id: 123456, sprites: Sprite(front_default: nil), types: [Types]())
-    
+
     func fetchPokemons() {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?offset=0&limit=964#") else { return }
-        
-        URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+
+        URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
 
             if let error = error { print(error.localizedDescription) }
 
@@ -36,11 +36,11 @@ class NetworkManager: ObservableObject {
             }
         }.resume()
     }
-    
+
     func fetchPokemonDetails(withURL url: String) {
         guard let url = URL(string: url) else { return }
-        
-        URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+
+        URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
             if let error = error { print(error.localizedDescription) }
 
             if let safeData = data {

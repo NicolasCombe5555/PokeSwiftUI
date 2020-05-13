@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     @ObservedObject var networkManager = NetworkManager.shared
-    
+
     var body: some View {
         NavigationView {
             List(networkManager.pokemons) { pokemon in
