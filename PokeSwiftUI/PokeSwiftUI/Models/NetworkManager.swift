@@ -9,16 +9,15 @@
 import Foundation
 
 class NetworkManager: ObservableObject {
+    @Published var pokemons = [PokemonRaw]()
+    @Published var pokemon: DetailedPokemon?
 
     static let shared = NetworkManager()
     private init() { }
 
-    @Published var pokemons = [PokemonRaw]()
-    @Published var pokemon = DetailedPokemon(id: 123456, sprites: Sprite(front_default: nil), types: [Types]())
-
     func fetchPokemons() {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?offset=0&limit=964#") else { return }
-
+        
         URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
 
             if let error = error { print(error.localizedDescription) }
