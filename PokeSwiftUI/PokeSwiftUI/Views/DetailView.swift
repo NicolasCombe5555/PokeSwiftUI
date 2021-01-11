@@ -29,8 +29,8 @@ struct DetailView: View {
             Spacer()
         }
         .onAppear {
-            self.networkManager.pokemon = nil
-            self.networkManager.fetchPokemonDetails(withURL: self.url)
+            networkManager.pokemon = nil
+            networkManager.fetchPokemonDetails(withURL: url)
         }
     }
 }

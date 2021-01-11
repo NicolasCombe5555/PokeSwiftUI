@@ -22,7 +22,7 @@ struct ContentView: View {
             .navigationBarTitle("PokeSwiftUI")
         }
         .onAppear {
-            self.networkManager.fetchPokemons()
+            networkManager.fetchPokemons()
         }
     }
 }

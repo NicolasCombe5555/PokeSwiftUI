@@ -12,9 +12,7 @@ struct Response: Decodable {
 }
 
 struct PokemonRaw: Decodable, Identifiable {
-    var id: String {
-        return name
-    }
+    var id: String { name }
     let name: String
     let url: String
 }
@@ -28,13 +26,10 @@ struct DetailedPokemon: Decodable {
 
 struct Sprite: Decodable {
     let front_default: String?
-
 }
 
 struct Types: Decodable, Identifiable {
-    var id: Int {
-        return slot
-    }
+    var id: Int { slot }
     let slot: Int
     let type: Type
 }
