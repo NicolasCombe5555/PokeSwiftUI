@@ -17,7 +17,7 @@ final class NetworkManager: ObservableObject {
     private init() { }
 
     func fetchPokemons() {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?offset=0&limit=964#") else { return }
+        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=25") else { return }
         
         URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
             if let error = error { print(error.localizedDescription); return }

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE12ACB6236FCC0300BD53DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACB5236FCC0300BD53DD /* AppDelegate.swift */; };
-		AE12ACB8236FCC0300BD53DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACB7236FCC0300BD53DD /* SceneDelegate.swift */; };
 		AE12ACBA236FCC0300BD53DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACB9236FCC0300BD53DD /* ContentView.swift */; };
 		AE12ACBC236FCC0400BD53DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE12ACBB236FCC0400BD53DD /* Assets.xcassets */; };
 		AE12ACBF236FCC0400BD53DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE12ACBE236FCC0400BD53DD /* Preview Assets.xcassets */; };
@@ -17,12 +15,15 @@
 		AE12ACCE236FD06C00BD53DD /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACCD236FD06C00BD53DD /* Pokemon.swift */; };
 		AE12ACD0236FD1B400BD53DD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACCF236FD1B400BD53DD /* WebView.swift */; };
 		AE12ACD2236FD3E000BD53DD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACD1236FD3E000BD53DD /* DetailView.swift */; };
+		AE3C949925EC17D500F40A2B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C949825EC17D500F40A2B /* LoadingView.swift */; };
+		AE3C94A125EC180000F40A2B /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C949E25EC180000F40A2B /* AsyncImage.swift */; };
+		AE3C94A825EC1AD900F40A2B /* PokeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C94A725EC1AD900F40A2B /* PokeSwiftUIApp.swift */; };
+		AE3C94AF25EC43A400F40A2B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C94AE25EC43A400F40A2B /* ImageLoader.swift */; };
+		AE3C94B225EC43CE00F40A2B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C94B125EC43CE00F40A2B /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AE12ACB2236FCC0300BD53DD /* PokeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE12ACB5236FCC0300BD53DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AE12ACB7236FCC0300BD53DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AE12ACB9236FCC0300BD53DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AE12ACBB236FCC0400BD53DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE12ACBE236FCC0400BD53DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -32,6 +33,11 @@
 		AE12ACCD236FD06C00BD53DD /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		AE12ACCF236FD1B400BD53DD /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		AE12ACD1236FD3E000BD53DD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		AE3C949825EC17D500F40A2B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AE3C949E25EC180000F40A2B /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		AE3C94A725EC1AD900F40A2B /* PokeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeSwiftUIApp.swift; sourceTree = "<group>"; };
+		AE3C94AE25EC43A400F40A2B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		AE3C94B125EC43CE00F40A2B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		AE8EC45E237073BF00DE2A34 /* PokeSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokeSwiftUI.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +93,8 @@
 			children = (
 				AE12ACCB236FD02000BD53DD /* NetworkManager.swift */,
 				AE12ACCD236FD06C00BD53DD /* Pokemon.swift */,
+				AE3C94AE25EC43A400F40A2B /* ImageLoader.swift */,
+				AE3C94B125EC43CE00F40A2B /* ImageService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -94,6 +102,8 @@
 		AE12ACCA236FCC5200BD53DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AE3C949E25EC180000F40A2B /* AsyncImage.swift */,
+				AE3C949825EC17D500F40A2B /* LoadingView.swift */,
 				AE12ACB9236FCC0300BD53DD /* ContentView.swift */,
 				AE12ACD1236FD3E000BD53DD /* DetailView.swift */,
 				AE12ACCF236FD1B400BD53DD /* WebView.swift */,
@@ -104,11 +114,10 @@
 		AEAE1631243F97AA009F8F57 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				AE12ACB5236FCC0300BD53DD /* AppDelegate.swift */,
-				AE12ACB7236FCC0300BD53DD /* SceneDelegate.swift */,
+				AE12ACC3236FCC0400BD53DD /* Info.plist */,
+				AE3C94A725EC1AD900F40A2B /* PokeSwiftUIApp.swift */,
 				AE12ACBB236FCC0400BD53DD /* Assets.xcassets */,
 				AE12ACC0236FCC0400BD53DD /* LaunchScreen.storyboard */,
-				AE12ACC3236FCC0400BD53DD /* Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -186,11 +195,14 @@
 			files = (
 				AE12ACCE236FD06C00BD53DD /* Pokemon.swift in Sources */,
 				AE12ACCC236FD02000BD53DD /* NetworkManager.swift in Sources */,
-				AE12ACB6236FCC0300BD53DD /* AppDelegate.swift in Sources */,
 				AE12ACD2236FD3E000BD53DD /* DetailView.swift in Sources */,
 				AE12ACD0236FD1B400BD53DD /* WebView.swift in Sources */,
-				AE12ACB8236FCC0300BD53DD /* SceneDelegate.swift in Sources */,
+				AE3C94A125EC180000F40A2B /* AsyncImage.swift in Sources */,
+				AE3C94B225EC43CE00F40A2B /* ImageService.swift in Sources */,
+				AE3C94AF25EC43A400F40A2B /* ImageLoader.swift in Sources */,
 				AE12ACBA236FCC0300BD53DD /* ContentView.swift in Sources */,
+				AE3C949925EC17D500F40A2B /* LoadingView.swift in Sources */,
+				AE3C94A825EC1AD900F40A2B /* PokeSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +345,7 @@
 				DEVELOPMENT_TEAM = 4Z3V8R3HV6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PokeSwiftUI/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,7 +369,7 @@
 				DEVELOPMENT_TEAM = 4Z3V8R3HV6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PokeSwiftUI/SupportingFiles/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
