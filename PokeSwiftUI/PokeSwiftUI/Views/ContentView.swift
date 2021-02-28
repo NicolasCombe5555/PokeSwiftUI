@@ -26,7 +26,7 @@ struct ContentView: View {
                         Text(String(pokemon.name.capitalized))
                             .font(.callout)
                     }
-
+                    .redacted(reason: networkManager.pokemons.isEmpty ? .placeholder : [])
                 }
             }
             .navigationBarTitle("PokeSwiftUI")
