@@ -6,8 +6,8 @@
 //  Copyright © 2021 Nicolas Combe. All rights reserved.
 //
 
-import UIKit
 import Combine
+import UIKit
 
 public class ImageService {
 
@@ -17,11 +17,10 @@ public class ImageService {
 
     public func fetchImage(url: URL) -> AnyPublisher<UIImage?, Never> {
         return URLSession.shared.dataTaskPublisher(for: url)
-            .tryMap { (data, _) -> UIImage? in
-                return UIImage(data: data)
-            }.catch { error in
-                return Just(nil)
-            }
+//            .print("debugging")
+            .tryMap { UIImage(data: $0.data) }
+            .timeout(.seconds(5), scheduler: DispatchQueue.main)
+            .replaceError(with: UIImage(named: "noImage"))
             .share()
             .eraseToAnyPublisher()
     }

@@ -13,7 +13,6 @@
 		AE12ACC2236FCC0400BD53DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE12ACC0236FCC0400BD53DD /* LaunchScreen.storyboard */; };
 		AE12ACCC236FD02000BD53DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACCB236FD02000BD53DD /* NetworkManager.swift */; };
 		AE12ACCE236FD06C00BD53DD /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACCD236FD06C00BD53DD /* Pokemon.swift */; };
-		AE12ACD0236FD1B400BD53DD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACCF236FD1B400BD53DD /* WebView.swift */; };
 		AE12ACD2236FD3E000BD53DD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACD1236FD3E000BD53DD /* DetailView.swift */; };
 		AE3C949925EC17D500F40A2B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C949825EC17D500F40A2B /* LoadingView.swift */; };
 		AE3C94A125EC180000F40A2B /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C949E25EC180000F40A2B /* AsyncImage.swift */; };
@@ -33,7 +32,6 @@
 		AE12ACC3236FCC0400BD53DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE12ACCB236FD02000BD53DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AE12ACCD236FD06C00BD53DD /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
-		AE12ACCF236FD1B400BD53DD /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		AE12ACD1236FD3E000BD53DD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AE3C949825EC17D500F40A2B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AE3C949E25EC180000F40A2B /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
@@ -96,10 +94,10 @@
 		AE12ACC9236FCC4400BD53DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AE12ACCB236FD02000BD53DD /* NetworkManager.swift */,
-				AE12ACCD236FD06C00BD53DD /* Pokemon.swift */,
 				AE3C94AE25EC43A400F40A2B /* ImageLoader.swift */,
 				AE3C94B125EC43CE00F40A2B /* ImageService.swift */,
+				AE12ACCB236FD02000BD53DD /* NetworkManager.swift */,
+				AE12ACCD236FD06C00BD53DD /* Pokemon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,10 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				AE3C949E25EC180000F40A2B /* AsyncImage.swift */,
-				AE3C949825EC17D500F40A2B /* LoadingView.swift */,
 				AE12ACB9236FCC0300BD53DD /* ContentView.swift */,
 				AE12ACD1236FD3E000BD53DD /* DetailView.swift */,
-				AE12ACCF236FD1B400BD53DD /* WebView.swift */,
+				AE3C949825EC17D500F40A2B /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,7 +208,6 @@
 				AEA5FDC925F484DB00D2CAFD /* Collection+Ext.swift in Sources */,
 				AE12ACCC236FD02000BD53DD /* NetworkManager.swift in Sources */,
 				AE12ACD2236FD3E000BD53DD /* DetailView.swift in Sources */,
-				AE12ACD0236FD1B400BD53DD /* WebView.swift in Sources */,
 				AE3C94A125EC180000F40A2B /* AsyncImage.swift in Sources */,
 				AE3C94B225EC43CE00F40A2B /* ImageService.swift in Sources */,
 				AEA5FDCD25F4853F00D2CAFD /* URL+Ext.swift in Sources */,

@@ -12,7 +12,7 @@ extension Collection {
 
     /// Workaround to be able to use .enumerated on SwiftUI lists
     /// - Returns: .enumerated()
-    func enumeratedArray() -> Array<(offset: Int, element: Self.Element)> {
+    public func enumeratedArray() -> Array<(offset: Int, element: Self.Element)> {
         Array(self.enumerated())
     }
 

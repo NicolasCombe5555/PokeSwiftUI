@@ -6,54 +6,44 @@
 //  Copyright © 2019 Nicolas Combe. All rights reserved.
 //
 
+import Combine
 import Foundation
 
 final class NetworkManager: ObservableObject {
 
+    static let shared = NetworkManager()
+    static let baseImageURL: URL = "https:raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+
     @Published var pokemons = [PokemonRaw]()
     @Published var pokemon: DetailedPokemon?
 
-    static let baseImageUrl: URL = "https:raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+    private var cancellables = Set<AnyCancellable>()
 
-    static let shared = NetworkManager()
     private init() { }
 
     func fetchPokemons() {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=25") else { return }
-        
-        URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
-            if let error = error { print(error.localizedDescription); return }
 
-            if let safeData = data {
-                do {
-                    let decoder = JSONDecoder()
-                    let results = try decoder.decode(Response.self, from: safeData)
-                    DispatchQueue.main.async { self.pokemons = results.results }
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-
-        }.resume()
+        URLSession.shared.dataTaskPublisher(for: url)
+            .receive(on: DispatchQueue.main)
+            .map(\.data)
+            .decode(type: Response.self, decoder: JSONDecoder())
+            .map(\.results)
+            .assertNoFailure()
+            .assign(to: \.pokemons, on: self)
+            .store(in: &cancellables)
     }
 
     func fetchPokemonDetails(withURL url: String) {
         guard let url = URL(string: url) else { return }
 
-        URLSession(configuration: .default).dataTask(with: url) { (data, _, error) in
-            if let error = error { print(error.localizedDescription) }
-
-            if let safeData = data {
-                do {
-                    let decoder = JSONDecoder()
-                    let result = try decoder.decode(DetailedPokemon.self, from: safeData)
-                    DispatchQueue.main.async { self.pokemon = result }
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-            
-        }.resume()
+        URLSession.shared.dataTaskPublisher(for: url)
+            .receive(on: DispatchQueue.main)
+            .map(\.data)
+            .decode(type: DetailedPokemon.self, decoder: JSONDecoder())
+            .assertNoFailure()
+            .sink(receiveValue: { self.pokemon = $0 })
+            .store(in: &cancellables)
     }
 
 }

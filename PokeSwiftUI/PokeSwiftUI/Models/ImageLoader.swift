@@ -1,13 +1,13 @@
 //
-//  ImageLoader3.swift
+//  ImageLoader.swift
 //  PokeSwiftUI
 //
 //  Created by nicolasCombe on 2/28/21.
 //  Copyright © 2021 Nicolas Combe. All rights reserved.
 //
 
-import UIKit
 import Combine
+import UIKit
 
 public final class ImageLoaderCache {
 
@@ -23,9 +23,9 @@ public final class ImageLoaderCache {
 
     public func loaderFor(url: URL) -> ImageLoader {
         let key = NSString(string: url.absoluteString)
-        if let loader = loaders.object(forKey: key) {
-            return loader
-        } else {
+
+        if let loader = loaders.object(forKey: key) { return loader }
+        else {
             let loader = ImageLoader(url: url)
             loaders.setObject(loader, forKey: key)
             return loader
@@ -41,8 +41,8 @@ public final class ImageLoaderCache {
 
 public final class ImageLoader: ObservableObject {
 
-    public var cancellable: AnyCancellable?
     @Published public var image: UIImage?
+    public var cancellable: AnyCancellable?
 
     public init(url: URL) {
         cancellable = ImageService.shared.fetchImage(url: url)

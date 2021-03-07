@@ -11,19 +11,19 @@ import SwiftUI
 struct AsyncImage: View {
 
     @ObservedObject var imageLoader: ImageLoader
+    let size: CGSize
     
     var body: some View {
         Group {
             if let image = imageLoader.image {
                 Image(uiImage: image)
-                    .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             } else {
                 LoadingView()
             }
         }
-        .frame(width: 50, height: 50, alignment: .center)
+        .frame(width: size.width, height: size.height)
     }
 
 }

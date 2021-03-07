@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     @ObservedObject var networkManager = NetworkManager.shared
 
@@ -19,17 +18,22 @@ struct ContentView: View {
     private var pokemons: some View {
         NavigationView {
             List(networkManager.pokemons.enumeratedArray(), id: \.offset) { (index, pokemon) in
-                NavigationLink(destination: DetailView(url: pokemon.url, name: pokemon.name.capitalized)) {
+                let imageURL = NetworkManager.baseImageURL.appendingPathComponent("\(index+1).png")
+
+                NavigationLink(destination: DetailView(
+                    url: pokemon.url,
+                    imageURL: imageURL,
+                    name: pokemon.name.capitalized)
+                ) {
                     HStack {
                         AsyncImage(
-                            imageLoader: ImageLoaderCache.shared.loaderFor(
-                                url: NetworkManager.baseImageUrl.appendingPathComponent("\(index+1).png")
-                            )
+                            imageLoader: ImageLoaderCache.shared.loaderFor(url: imageURL),
+                            size: CGSize(width: 50, height: 50)
                         )
+
                         Text(String(pokemon.name.capitalized))
                             .font(.callout)
                     }
-                    .redacted(reason: networkManager.pokemons.isEmpty ? .placeholder : [])
                 }
             }
             .navigationBarTitle("PokeSwiftUI")

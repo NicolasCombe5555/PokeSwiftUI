@@ -1,9 +1,9 @@
 //
 //  LoadingView.swift
-//  AsyncImage
+//  PokeSwiftUI
 //
 //  Created by nicolasCombe on 2/28/21.
-//  Copyright © 2021 Vadym Bulavin. All rights reserved.
+//  Copyright © 2021 Nicolas Combe. All rights reserved.
 //
 
 import SwiftUI
