@@ -22,7 +22,8 @@ struct ContentView: View {
             List(networkManager.pokemons) { pokemon in
                 NavigationLink(destination: DetailView(url: pokemon.url, name: pokemon.name.capitalized)) {
                     HStack {
-                        AsyncImage(imageLoader: ImageLoader(url: URL(string: baseUrlString + "\(1).png")!))
+                        AsyncImage(imageLoader: ImageLoaderCache.shared.loaderFor(
+                                    url: URL(string: baseUrlString + "\(1).png")!))
                         Text(String(pokemon.name.capitalized))
                             .font(.callout)
                     }

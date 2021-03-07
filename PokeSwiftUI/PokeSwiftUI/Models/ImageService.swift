@@ -22,6 +22,7 @@ public class ImageService {
             }.catch { error in
                 return Just(nil)
             }
+            .share()
             .eraseToAnyPublisher()
     }
 
