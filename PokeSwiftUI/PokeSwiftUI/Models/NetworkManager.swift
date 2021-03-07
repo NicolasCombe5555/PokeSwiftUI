@@ -42,7 +42,7 @@ final class NetworkManager: ObservableObject {
             .map(\.data)
             .decode(type: DetailedPokemon.self, decoder: JSONDecoder())
             .assertNoFailure()
-            .sink(receiveValue: { self.pokemon = $0 })
+            .sink(receiveValue: { [weak self] in self?.pokemon = $0 })
             .store(in: &cancellables)
     }
 
