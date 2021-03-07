@@ -6,6 +6,10 @@
 //  Copyright © 2021 Nicolas Combe. All rights reserved.
 //
 
+// MARK: - Inspirated from:
+/// - https://github.com/Dimillian/MovieSwiftUI
+/// - https://www.donnywals.com/efficiently-loading-images-in-table-views-and-collection-views/
+
 import Combine
 import UIKit
 
