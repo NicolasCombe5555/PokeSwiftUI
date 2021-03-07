@@ -13,6 +13,8 @@ final class NetworkManager: ObservableObject {
     @Published var pokemons = [PokemonRaw]()
     @Published var pokemon: DetailedPokemon?
 
+    static let baseImageUrl: URL = "https:raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+
     static let shared = NetworkManager()
     private init() { }
 
