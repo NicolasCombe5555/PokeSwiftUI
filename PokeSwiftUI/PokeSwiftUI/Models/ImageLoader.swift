@@ -51,6 +51,7 @@ public final class ImageLoader: ObservableObject {
     public init(url: URL) {
         cancellable = ImageService.shared.fetchImage(url: url)
             .receive(on: DispatchQueue.main)
+            .replaceError(with: UIImage(named: "noImage"))
             .assign(to: \.image, on: self)
     }
 

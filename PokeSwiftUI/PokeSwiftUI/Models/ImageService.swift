@@ -15,12 +15,11 @@ public class ImageService {
 
     private init() { }
 
-    public func fetchImage(url: URL) -> AnyPublisher<UIImage?, Never> {
+    public func fetchImage(url: URL) -> AnyPublisher<UIImage?, Error> {
         return URLSession.shared.dataTaskPublisher(for: url)
 //            .print("debugging")
             .tryMap { UIImage(data: $0.data) }
             .timeout(.seconds(5), scheduler: DispatchQueue.main)
-            .replaceError(with: UIImage(named: "noImage"))
             .share()
             .eraseToAnyPublisher()
     }
