@@ -46,7 +46,7 @@ public final class ImageLoaderCache {
 public final class ImageLoader: ObservableObject {
 
     @Published public var image: UIImage?
-    public var cancellable: AnyCancellable?
+    private var cancellable: AnyCancellable?
 
     public init(url: URL) {
         cancellable = ImageService.shared.fetchImage(url: url)

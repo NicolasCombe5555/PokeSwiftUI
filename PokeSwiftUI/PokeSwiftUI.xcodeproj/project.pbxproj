@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,16 +11,12 @@
 		AE12ACBC236FCC0400BD53DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE12ACBB236FCC0400BD53DD /* Assets.xcassets */; };
 		AE12ACBF236FCC0400BD53DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE12ACBE236FCC0400BD53DD /* Preview Assets.xcassets */; };
 		AE12ACC2236FCC0400BD53DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE12ACC0236FCC0400BD53DD /* LaunchScreen.storyboard */; };
-		AE12ACCC236FD02000BD53DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACCB236FD02000BD53DD /* NetworkManager.swift */; };
-		AE12ACCE236FD06C00BD53DD /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACCD236FD06C00BD53DD /* Pokemon.swift */; };
 		AE12ACD2236FD3E000BD53DD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12ACD1236FD3E000BD53DD /* DetailView.swift */; };
 		AE3C949925EC17D500F40A2B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C949825EC17D500F40A2B /* LoadingView.swift */; };
 		AE3C94A125EC180000F40A2B /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C949E25EC180000F40A2B /* AsyncImage.swift */; };
 		AE3C94A825EC1AD900F40A2B /* PokeSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C94A725EC1AD900F40A2B /* PokeSwiftUIApp.swift */; };
-		AE3C94AF25EC43A400F40A2B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C94AE25EC43A400F40A2B /* ImageLoader.swift */; };
-		AE3C94B225EC43CE00F40A2B /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C94B125EC43CE00F40A2B /* ImageService.swift */; };
+		AE3F8A1226069392007EA184 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = AE3F8A1126069392007EA184 /* Network */; };
 		AEA5FDC925F484DB00D2CAFD /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA5FDC825F484DB00D2CAFD /* Collection+Ext.swift */; };
-		AEA5FDCD25F4853F00D2CAFD /* URL+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA5FDCC25F4853F00D2CAFD /* URL+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,17 +26,13 @@
 		AE12ACBE236FCC0400BD53DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AE12ACC1236FCC0400BD53DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE12ACC3236FCC0400BD53DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AE12ACCB236FD02000BD53DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		AE12ACCD236FD06C00BD53DD /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		AE12ACD1236FD3E000BD53DD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AE3C949825EC17D500F40A2B /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AE3C949E25EC180000F40A2B /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		AE3C94A725EC1AD900F40A2B /* PokeSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeSwiftUIApp.swift; sourceTree = "<group>"; };
-		AE3C94AE25EC43A400F40A2B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		AE3C94B125EC43CE00F40A2B /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		AE3F8A0E2606932C007EA184 /* Network */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Network; sourceTree = "<group>"; };
 		AE8EC45E237073BF00DE2A34 /* PokeSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokeSwiftUI.entitlements; sourceTree = "<group>"; };
 		AEA5FDC825F484DB00D2CAFD /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
-		AEA5FDCC25F4853F00D2CAFD /* URL+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3F8A1226069392007EA184 /* Network in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +52,7 @@
 			children = (
 				AE12ACB4236FCC0300BD53DD /* PokeSwiftUI */,
 				AE12ACB3236FCC0300BD53DD /* Products */,
+				AE3F8A1026069392007EA184 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,8 +70,8 @@
 				AE8EC45E237073BF00DE2A34 /* PokeSwiftUI.entitlements */,
 				AEAE1631243F97AA009F8F57 /* SupportingFiles */,
 				AEA5FDC725F484C400D2CAFD /* Extensions */,
-				AE12ACC9236FCC4400BD53DD /* Models */,
 				AE12ACCA236FCC5200BD53DD /* Views */,
+				AE3F8A0C260692CC007EA184 /* Modules */,
 				AE12ACBD236FCC0400BD53DD /* Preview Content */,
 			);
 			path = PokeSwiftUI;
@@ -91,33 +85,44 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AE12ACC9236FCC4400BD53DD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				AE3C94AE25EC43A400F40A2B /* ImageLoader.swift */,
-				AE3C94B125EC43CE00F40A2B /* ImageService.swift */,
-				AE12ACCB236FD02000BD53DD /* NetworkManager.swift */,
-				AE12ACCD236FD06C00BD53DD /* Pokemon.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		AE12ACCA236FCC5200BD53DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AE3C949E25EC180000F40A2B /* AsyncImage.swift */,
 				AE12ACB9236FCC0300BD53DD /* ContentView.swift */,
 				AE12ACD1236FD3E000BD53DD /* DetailView.swift */,
-				AE3C949825EC17D500F40A2B /* LoadingView.swift */,
+				AE3F8A162606979E007EA184 /* Helpers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AE3F8A0C260692CC007EA184 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AE3F8A0E2606932C007EA184 /* Network */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AE3F8A1026069392007EA184 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE3F8A162606979E007EA184 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AE3C949E25EC180000F40A2B /* AsyncImage.swift */,
+				AE3C949825EC17D500F40A2B /* LoadingView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		AEA5FDC725F484C400D2CAFD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				AEA5FDC825F484DB00D2CAFD /* Collection+Ext.swift */,
-				AEA5FDCC25F4853F00D2CAFD /* URL+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +154,9 @@
 			dependencies = (
 			);
 			name = PokeSwiftUI;
+			packageProductDependencies = (
+				AE3F8A1126069392007EA184 /* Network */,
+			);
 			productName = PokeSwiftUI;
 			productReference = AE12ACB2236FCC0300BD53DD /* PokeSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -204,14 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE12ACCE236FD06C00BD53DD /* Pokemon.swift in Sources */,
 				AEA5FDC925F484DB00D2CAFD /* Collection+Ext.swift in Sources */,
-				AE12ACCC236FD02000BD53DD /* NetworkManager.swift in Sources */,
 				AE12ACD2236FD3E000BD53DD /* DetailView.swift in Sources */,
 				AE3C94A125EC180000F40A2B /* AsyncImage.swift in Sources */,
-				AE3C94B225EC43CE00F40A2B /* ImageService.swift in Sources */,
-				AEA5FDCD25F4853F00D2CAFD /* URL+Ext.swift in Sources */,
-				AE3C94AF25EC43A400F40A2B /* ImageLoader.swift in Sources */,
 				AE12ACBA236FCC0300BD53DD /* ContentView.swift in Sources */,
 				AE3C949925EC17D500F40A2B /* LoadingView.swift in Sources */,
 				AE3C94A825EC1AD900F40A2B /* PokeSwiftUIApp.swift in Sources */,
@@ -416,6 +419,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE3F8A1126069392007EA184 /* Network */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Network;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AE12ACAA236FCC0300BD53DD /* Project object */;
 }

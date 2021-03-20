@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Network
 
 struct DetailView: View {
     @ObservedObject var networkManager = NetworkManager.shared

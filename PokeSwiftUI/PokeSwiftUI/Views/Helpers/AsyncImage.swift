@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Network
 
 struct AsyncImage: View {
 

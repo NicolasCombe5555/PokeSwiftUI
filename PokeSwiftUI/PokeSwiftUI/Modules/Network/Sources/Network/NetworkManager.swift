@@ -9,19 +9,21 @@
 import Combine
 import Foundation
 
-final class NetworkManager: ObservableObject {
+public final class NetworkManager: ObservableObject {
 
-    static let shared = NetworkManager()
-    static let baseImageURL: URL = "https:raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+    public static let shared = NetworkManager()
+    public static let baseImageURL: URL = "https:raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
 
-    @Published var pokemons = [PokemonRaw]()
-    @Published var pokemon: DetailedPokemon?
+    @Published
+    public var pokemons = [PokemonRaw]()
+    @Published
+    public var pokemon: DetailedPokemon?
 
     private var cancellables = Set<AnyCancellable>()
 
     private init() { }
 
-    func fetchPokemons() {
+    public func fetchPokemons() {
         guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=25") else { return }
 
         URLSession.shared.dataTaskPublisher(for: url)
@@ -34,7 +36,7 @@ final class NetworkManager: ObservableObject {
             .store(in: &cancellables)
     }
 
-    func fetchPokemonDetails(withURL url: String) {
+    public func fetchPokemonDetails(withURL url: String) {
         guard let url = URL(string: url) else { return }
 
         URLSession.shared.dataTaskPublisher(for: url)
