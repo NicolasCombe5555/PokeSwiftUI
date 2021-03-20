@@ -20,11 +20,12 @@ public final class NetworkManager: ObservableObject {
     public var pokemon: DetailedPokemon?
 
     private var cancellables = Set<AnyCancellable>()
+    private let limit = 50
 
     private init() { }
 
     public func fetchPokemons() {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=25") else { return }
+        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon?limit=\(limit)") else { return }
 
         URLSession.shared.dataTaskPublisher(for: url)
             .receive(on: DispatchQueue.main)
