@@ -9,13 +9,10 @@
 import SwiftUI
 
 @main
-struct ThaiAppetizersApp: App {
-
+struct PokeSwiftUI: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
     }
-
 }
-
