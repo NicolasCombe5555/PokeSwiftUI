@@ -27,6 +27,7 @@ struct ContentView: View {
                     name: pokemon.name.capitalized)
                 ) {
                     HStack {
+                        // TODO?: Replace when Xcode 13 is available
                         AsyncImage(
                             imageLoader: ImageLoaderCache.shared.loaderFor(url: imageURL),
                             size: CGSize(width: 50, height: 50)
