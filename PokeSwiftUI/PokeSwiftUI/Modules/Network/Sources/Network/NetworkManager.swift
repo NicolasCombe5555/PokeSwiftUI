@@ -15,7 +15,7 @@ public final class NetworkManager: ObservableObject {
     public static let baseImageURL: URL = "https:raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
 
     @Published
-    public var pokemons = [PokemonRaw]()
+    public var pokemons: [PokemonRaw] = []
     @Published
     public var pokemon: DetailedPokemon?
 
